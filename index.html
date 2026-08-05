@@ -1,148 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAVJOT | Market Education</title>
+  <meta charset="UTF-8">
+  <title>PANKAJ BHARDWAJ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ============================================================
-  EDIT THESE VALUES ONLY
-  TELEGRAM_LINK   -> your t.me invite link (used by every join button)
-  PIXEL_ID        -> your Meta Pixel ID
-  PROFILE_IMG     -> path/URL to your photo
-============================================================ -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2328502784350171');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=1616402466091476&ev=PageView&noscript=1" />
+  </noscript>
 
-<style>
-  :root{
-    --bg:#0a0f1c;
-    --bg-panel:#101830;
-    --fg:#e9ecf5;
-    --fg-muted:#94a1c2;
-    --gold:#2AABEE;
-    --gold-bright:#6FC8F5;
-    --gold-gradient:linear-gradient(135deg,#2AABEE,#229ED9);
-    --line:rgba(233,236,245,0.10);
-    --up:#2f8f6f;
-    --down:#b0463f;
-  }
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    background:var(--bg);
-    color:var(--fg);
-    line-height:1.6;
-    padding-bottom:86px;
-  }
-  a{color:inherit;}
-  .wrap{max-width:480px;margin:0 auto;padding:0 20px;}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #000428, #004e92);
+      color: white;
+      text-align: center;
+      padding: 40px 15px;
+    }
 
-  .hero{padding:40px 0 8px;text-align:center;}
-  .avatar-ring{display:inline-block;padding:4px;border-radius:50%;background:conic-gradient(from 180deg, var(--gold), var(--gold-bright), var(--gold));margin-bottom:22px;}
-  .avatar{width:104px;height:104px;border-radius:50%;object-fit:cover;display:block;background:#1a2340;border:3px solid var(--bg);}
-  .eyebrow{font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:14px;}
-  h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:30px;line-height:1.2;margin-bottom:10px;}
-  .role{font-size:15px;color:var(--fg-muted);margin-bottom:4px;}
-  .focus{font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:13px;color:var(--gold);margin-bottom:26px;}
+    .container {
+      max-width: 420px;
+      margin: auto;
+      animation: fadeIn 1.2s ease;
+    }
 
-  .panel{background:var(--bg-panel);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin-bottom:18px;text-align:left;}
-  .panel h3{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:16px;margin-bottom:14px;}
-  .curriculum-item{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:14px;}
-  .curriculum-item:first-of-type{border-top:none;padding-top:0;}
-  .curriculum-item .mark{font-family:ui-monospace,"SF Mono",Consolas,monospace;color:var(--gold);flex-shrink:0;}
+    /* 🔥 PROFILE IMAGE WITH GRADIENT RING */
+    .image-wrapper {
+      display: inline-block;
+      padding: 5px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #ffd700, #ff6a00, #ffd700);
+      background-size: 200% 200%;
+      animation: gradientMove 3s ease infinite, glowPulse 2s infinite;
+      margin-bottom: 20px;
+    }
 
-  .cta-btn{display:block;width:100%;background:var(--gold-gradient);color:#fff;font-weight:600;font-size:16px;text-align:center;padding:16px 20px;border-radius:10px;text-decoration:none;margin:22px 0 10px;}
-  .cta-btn:active{transform:scale(.98);}
-  .cta-sub{text-align:center;font-size:12px;color:var(--fg-muted);margin-bottom:30px;}
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
 
-  .disclaimer{font-size:11.5px;color:var(--fg-muted);background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:10px;padding:14px 16px;line-height:1.65;margin-bottom:30px;}
-  .disclaimer b{color:var(--fg);}
+    /* ✅ VERIFIED BADGE */
+    .verified {
+      color: #1DA1F2;
+      font-size: 20px;
+      margin-left: 6px;
+    }
 
-  .page-footer{text-align:center;padding:20px 0 30px;font-size:13px;color:rgba(233,236,245,0.35);}
-  .page-footer a{text-decoration:underline;margin:0 6px;}
+    h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
 
-  .sticky-bar{position:fixed;left:0;right:0;bottom:0;background:rgba(10,15,28,0.92);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px;z-index:50;}
-  .sticky-bar .inner{max-width:480px;margin:0 auto;}
-  .sticky-btn{display:block;width:100%;text-align:center;background:var(--gold-gradient);color:#fff;font-weight:600;font-size:15px;padding:14px 18px;border-radius:9px;text-decoration:none;}
-  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px;}
-</style>
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    /* 🔥 PULSING BUTTON */
+    .btn {
+      background: #1877f2;
+      color: white;
+      padding: 16px 32px;
+      font-size: 18px;
+      border-radius: 12px;
+      display: inline-block;
+      text-decoration: none;
+      margin-top: 25px;
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 0 rgba(24,119,242,0.6);
+    }
+
+    .urgency {
+      margin-top: 18px;
+      font-size: 15px;
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .trust {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-top: 25px;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(24,119,242,0.7); }
+      70% { box-shadow: 0 0 0 18px rgba(24,119,242,0); }
+      100% { box-shadow: 0 0 0 0 rgba(24,119,242,0); }
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 10px #ffd700; }
+      50% { box-shadow: 0 0 25px #ff6a00; }
+      100% { box-shadow: 0 0 10px #ffd700; }
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="wrap">
+  <div class="container">
 
-    <div class="hero">
-      <div class="avatar-ring">
-        <img src="profile.jpg" alt="Pankaj" class="avatar" width="104" height="104">
-      </div>
-      <div class="eyebrow">Market Education</div>
-      <h1>Pankaj Bhardwaj</h1>
-      <div class="role">Reading charts the way the market actually moves</div>
-      <div class="focus">#Nifty &middot; #BankNifty &middot; #PriceAction</div>
+    <div class="image-wrapper">
+      <img src="profile.jpg" alt="Mehta Profile Picture" class="profile-img">
     </div>
 
-    <div class="panel">
-      <h3>Inside the free channel</h3>
-      <div class="curriculum-item"><span class="mark">01</span><span>Technical analysis fundamentals &mdash; support, resistance, trend structure</span></div>
-      <div class="curriculum-item"><span class="mark">02</span><span>How to read Nifty &amp; Bank Nifty charts session by session</span></div>
-      <div class="curriculum-item"><span class="mark">03</span><span>Building your own analytical process, not copy-paste calls</span></div>
-    </div>
+    <h1>
+      PANKAJ BHARDWAJ
+    </h1>
 
-    <a href="#" target="_blank" rel="noopener" class="cta-btn join-btn">
-      Join the Free Telegram Channel
+    <h2>
+      India’s Best Channel for 
+      <span class="highlight">#Nifty #BankNifty #Stocks</span>
+    </h2>
+
+    <p>
+      📈 Recover Your Trading Losses <br>
+      💰 Earn <strong>₹3K – ₹10K Daily</strong> <br><br>
+      🇮🇳 Trusted by Thousands of Indian Traders
+    </p>
+
+    <a href="https://t.me/+mVuBOHF6vDdjZjU1"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn"
+       onclick="fbq('track','Lead')">
+       👉 Join Our Telegram Channel
     </a>
 
-    <div class="disclaimer">
-      <b>Educational purpose only.</b> Content shared on this channel is for learning technical analysis and market structure. It is not investment advice, a buy/sell recommendation, or a guarantee of returns. Markets carry risk, including loss of capital &mdash; please do your own research or consult a SEBI-registered advisor before trading.
+
+    <div class="urgency">
+      ⏳ Limited Free Access – Join Before Market Opens
     </div>
 
-    <div class="page-footer">
-      Ads by <a href="https://t.me/ad_by_king">Ads_By_King</a>
+    <div class="trust">
+      ✅ Free Calls <br>
+      ✅ Live Market Updates <br>
+      ✅ Beginner Friendly <br>
+      🔒 No Spam • 100% Transparency
     </div>
 
+  </div> <div style="margin-top:20px; font-size:13px; opacity:0.8;">
+    🚀 Ads Managed by Ads_By_King 
+    <a href="https://t.me/ad_by_king"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:#ffd700; text-decoration:none;">
+       Contact @Ads_By_King
+    </a>
   </div>
-
-  <div class="sticky-bar">
-    <div class="inner">
-      <a href="#" target="_blank" rel="noopener" class="sticky-btn join-btn">
-        Join Free Telegram Channel
-      </a>
-    </div>
-  </div>
-
-  <!-- ============================================================
-    SINGLE SOURCE OF TRUTH: change the link in ONE place below.
-    Every join button on the page (mid CTA, sticky bar, any you add
-    later with class="join-btn") reads from this constant.
-  ============================================================ -->
-  <script>
-    var TELEGRAM_LINK = "https://t.me/+R_HlrVOllM5kNTJl";
-  </script>
-
-  <!-- Meta Pixel: loaded async, does not block render -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2328502784350171'); /* PIXEL_ID */
-  fbq('track', 'PageView');
-
-  // Apply the single link to every join button, and fire one Lead
-  // event per click, no matter how many buttons exist on the page.
-  document.querySelectorAll('.join-btn').forEach(function(el){
-    el.setAttribute('href', TELEGRAM_LINK);
-    el.addEventListener('click', function(){
-      fbq('track', 'Lead', { content_name: 'telegram_join' });
-    });
-  });
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1440444807915655&ev=PageView&noscript=1"/></noscript>
 
 </body>
 </html>
